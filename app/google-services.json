@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "986905329207",
+    "project_id": "palmeida-sign-in",
+    "storage_bucket": "palmeida-sign-in.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986905329207:android:c8a2a9e9be24c918cfc9b2",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986905329207-tf7fb1bvgv8q62crt32d7h1tio51v726.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.login",
+            "certificate_hash": "d78b765a763395cd8a9bb409e82048c6437b263d"
+          }
+        },
+        {
+          "client_id": "986905329207-9p54r3qmctrv969ma4p1np3arf3793mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI9nMbccphELdgQHrpLYfiZG4DTgy6g14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986905329207-9p54r3qmctrv969ma4p1np3arf3793mu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
