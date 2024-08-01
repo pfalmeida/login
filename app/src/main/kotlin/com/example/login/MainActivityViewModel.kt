@@ -10,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.android.gms.auth.api.identity.AuthorizationRequest
 import com.google.android.gms.common.Scopes
 import com.google.android.gms.common.api.Scope
+import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential.Companion.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
@@ -73,8 +74,12 @@ class MainActivityViewModel @Inject constructor(
                         Scope("https://www.googleapis.com/auth/user.gender.read"),
                         Scope("https://www.googleapis.com/auth/userinfo.email")
                     )
+
                     val authorizationRequest =
-                        AuthorizationRequest.builder().setRequestedScopes(requestedScopes).build()
+                        AuthorizationRequest.builder()
+                            .setRequestedScopes(requestedScopes)
+                            .requestOfflineAccess("986905329207-9p54r3qmctrv969ma4p1np3arf3793mu.apps.googleusercontent.com")
+                            .build()
                     sendEvent(Event.LaunchAuthorizationClient(authorizationRequest))
                 } catch (e: GoogleIdTokenParsingException) {
                     Timber.e(RuntimeException("Credential Manager Parsing Error. Google Id Token Parsing Exception: $e"))
